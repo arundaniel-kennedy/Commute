@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><title>Loginpage</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<script>
+function validateForm(){
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.email.value))
+  {
+    return true;
+  }
+  else{
+    alert("You have entered an invalid email address!");
+	  return false;
+  }
+}
+	</script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron jumbotron-text-centered" style="margin:200px">
+      <center><h1>Welcome Admin</h1></center>
+    <form name="myForm" action="check.php" onsubmit="return validateForm()" method="POST">
+    <div class="form-group">
+      <label>Email address:</label>
+      <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+    </div>
+    <div class="form-group">
+      <label >Password:</label>
+      <input type="password" name="password" pattern=".{8,}"  class="form-control" placeholder="Enter Password" required>
+		<small class="form-text text-muted">[8 character minimum]</small>
+			</div>
+    <center><button type="submit" class="btn btn-dark">submit</button></center>
+		</form>
+</div>
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
